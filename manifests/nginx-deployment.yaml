@@ -11,6 +11,7 @@ spec:
     metadata:
       labels:
         app: nginx
+        type: front-end
     spec:
       containers:
       - name: nginx
