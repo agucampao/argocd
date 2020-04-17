@@ -9,7 +9,7 @@ spec:
   - host: ec2-34-247-64-16.eu-west-1.compute.amazonaws.com
     http:
       paths:
-      - path: /
+      - path: /*
         backend:
           serviceName: my-service
           servicePort: 80
