@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: my-service
+  label: my-service
 spec:
   #type: NodePort      
   selector:
