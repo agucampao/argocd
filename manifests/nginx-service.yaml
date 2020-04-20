@@ -1,14 +1,19 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-service
+  name: nginx-service
 spec:
-  #type: NodePort      
+  type: NodePort      
   selector:
-    app: nginx
-    type: front-end    
+    name: nginx-ingress
+    #app: nginx
+    #type: front-end    
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 9376
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: http
       #nodePort: 30025
+    - port: 443
+      targetPort: 443
+      name: https
